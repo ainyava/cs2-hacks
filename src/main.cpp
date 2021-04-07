@@ -3,6 +3,7 @@
 #include "../include/Memory.hpp"
 #include "../include/csgo.hpp"
 #include "../include/wallhack.hpp"
+#include "../include/bhop.hpp"
 
 using namespace std;
 using namespace hazedumper::netvars;
@@ -45,6 +46,7 @@ int main() {
 		player = Memory.read<uintptr_t>(client + dwEntityList + (playerIndex * 0x10) );
 
 		handleGlow();
+		handleBhop();
 
         if (GetAsyncKeyState(VK_F8) & 1) {
             handleBrightness();
