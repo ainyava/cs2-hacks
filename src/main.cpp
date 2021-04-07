@@ -2,6 +2,7 @@
 #include <Windows.h>
 #include "../include/Memory.hpp"
 #include "../include/csgo.hpp"
+#include "../include/wallhack.hpp"
 
 using namespace std;
 using namespace hazedumper::netvars;
@@ -35,15 +36,18 @@ int main() {
     uintptr_t client_state = Memory.read<uintptr_t>(engine+dwClientState);
     if (!client_state) return 0;
     cout << "Client state: " << client_state << endl;
+
+    handleBrightness();
 	
     while (cheatIsRunning) {
 		
 		int playerIndex = Memory.read<uintptr_t>(client_state + dwClientState_GetLocalPlayer);
 		player = Memory.read<uintptr_t>(client + dwEntityList + (playerIndex * 0x10) );
 
-		//TODO: Add handlers
+		handleGlow();
 
         if (GetAsyncKeyState(VK_F8) & 1) {
+            handleBrightness();
             cheatIsRunning = false;
         }
     }
