@@ -4,6 +4,7 @@
 #include "../include/csgo.hpp"
 #include "../include/wallhack.hpp"
 #include "../include/bhop.hpp"
+#include "../include/triggerbot.hpp"
 
 using namespace std;
 using namespace hazedumper::netvars;
@@ -47,6 +48,7 @@ int main() {
 
 		handleGlow();
 		handleBhop();
+		handleTriggerBot();
 
         if (GetAsyncKeyState(VK_F8) & 1) {
             handleBrightness();
