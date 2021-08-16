@@ -7,17 +7,14 @@ using namespace hazedumper::netvars;
 using namespace hazedumper::signatures;
 
 struct GlowStruct {
-    BYTE base[4];
-    float red;
-    float green;
-    float blue;
-    float alpha;
-    BYTE padding[16];
-    bool renderWhenOccluded;
-    bool renderWhenUnoccluded;
-    BYTE fullbloom;
-    BYTE padding2[5];
-    int glowStyle;
+	BYTE base[8];
+	float red;
+	float green;
+	float blue;
+	float alpha;
+	BYTE padding[16];
+	bool renderWhenOccluded;
+	bool renderWhenUnoccluded;
 };
 
 struct ClrRender {
