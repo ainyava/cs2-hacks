@@ -1,5 +1,7 @@
 # CSGO Hacks - External CSGO cheats
 
+![CSGO Glow ESP wallhack](extra/screenshot.jpg)
+
 ### Story
 I've played CSGO for 3 whole years and claim the service medals and let me tell you that CSGO is filled with cheaters.
 
