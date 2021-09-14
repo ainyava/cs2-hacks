@@ -10,7 +10,7 @@ struct PlayerVector {
 };
 
 extern class Memory Memory;
-extern uintptr_t client;
-extern uintptr_t player;
+extern uint32_t client;
+extern uint32_t player;
 
 void handleBhop();

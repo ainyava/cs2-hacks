@@ -11,9 +11,9 @@ using namespace hazedumper::netvars;
 using namespace hazedumper::signatures;
 
 class Memory Memory;
-uintptr_t client;
-uintptr_t engine;
-uintptr_t player;
+uint32_t client;
+uint32_t engine;
+uint32_t player;
 
 bool cheatIsRunning = true;
 
@@ -25,8 +25,8 @@ void die(const char* msg) {
 
 int main() {
 
-    uintptr_t csgo = Memory.GetProcessId("csgo.exe");
-	if (csgo == NULL) die("Cannot find CSGO");
+    uint32_t csgo = Memory.GetProcessId("csgo.exe");
+	if (!csgo) die("Cannot find CSGO");
 	cout << "Process found: " << csgo << endl;
 
     engine = Memory.GetModuleBase(csgo, "engine.dll");
@@ -35,7 +35,7 @@ int main() {
 	//if (!client || !engine) return 0;
 	cout << "Engine module: " << engine << ", Client module: " << client << endl;
 
-    uintptr_t client_state = Memory.read<uintptr_t>(engine+dwClientState);
+    uint32_t client_state = Memory.read<uint32_t>(engine+dwClientState);
     if (!client_state) return 0;
     cout << "Client state: " << client_state << endl;
 
@@ -43,8 +43,8 @@ int main() {
 	
     while (cheatIsRunning) {
 		
-		int playerIndex = Memory.read<uintptr_t>(client_state + dwClientState_GetLocalPlayer);
-		player = Memory.read<uintptr_t>(client + dwEntityList + (playerIndex * 0x10) );
+		int playerIndex = Memory.read<uint32_t>(client_state + dwClientState_GetLocalPlayer);
+		player = Memory.read<uint32_t>(client + dwEntityList + (playerIndex * 0x10) );
 
 		handleGlow();
 		handleBhop();

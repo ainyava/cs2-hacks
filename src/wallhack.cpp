@@ -20,7 +20,7 @@ void handleGlow() {
 
 		for (short int i = 0; i < 64; i++) {
 			uint32_t entity = Memory.read<uint32_t>(client + dwEntityList + (i * 0x10));
-			if (entity != NULL) {
+			if (entity) {
 
 				int entityTeam = Memory.read<int>(entity + m_iTeamNum);
 				int glowIndex = Memory.read<int>(entity + m_iGlowIndex);
