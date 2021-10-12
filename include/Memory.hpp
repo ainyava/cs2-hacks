@@ -7,8 +7,8 @@
 class Memory {
 public:
     HANDLE handle = NULL;
-    uintptr_t GetProcessId(const char* windowName);
-    uintptr_t GetModuleBase(uintptr_t  processId, const char* moduleName);
+    uintptr_t GetProcessId(const wchar_t* windowName);
+    uintptr_t GetModuleBase(uintptr_t  processId, const wchar_t* moduleName);
 
     template <class Type>
     Type read(uintptr_t address) {

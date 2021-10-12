@@ -25,12 +25,12 @@ void die(const char* msg) {
 
 int main() {
 
-    uint32_t csgo = Memory.GetProcessId("csgo.exe");
+    uint32_t csgo = Memory.GetProcessId(L"csgo.exe");
 	if (!csgo) die("Cannot find CSGO");
 	cout << "Process found: " << csgo << endl;
 
-    engine = Memory.GetModuleBase(csgo, "engine.dll");
-	client = Memory.GetModuleBase(csgo, "client.dll");
+    engine = Memory.GetModuleBase(csgo, L"engine.dll");
+	client = Memory.GetModuleBase(csgo, L"client.dll");
 
 	//if (!client || !engine) return 0;
 	cout << "Engine module: " << engine << ", Client module: " << client << endl;

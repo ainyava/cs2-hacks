@@ -37,9 +37,9 @@ To report problems, post ideas or requesting a feature make an issue.
 ### How to run
 1. run latest version of CSGO.
 
-This project built with CMake so you can open project in CMake supported IDEs and just build and run.
+*Windows:* Its just easier to open solution in Visual Studio and run it!
 
-Using CLI:
+but this project also supports CMake so you can use that too:
 
 ```bash
 git clone https://github.com/ainyava/CSGOHacks

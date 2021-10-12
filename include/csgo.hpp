@@ -1,5 +1,6 @@
 #pragma once
 #include <cstdint>
+#include <cstddef>
 
 // 2021-10-08 11:39:46.572782400 UTC
 
