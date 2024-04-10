@@ -18,37 +18,55 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\hacks\reader.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\memory\memory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\classes\auto_updater.hpp" />
+    <ClInclude Include="src\classes\config.hpp" />
+    <ClInclude Include="src\classes\globals.hpp" />
+    <ClInclude Include="src\classes\json.hpp" />
+    <ClInclude Include="src\classes\offsets.hpp" />
+    <ClInclude Include="src\classes\render.hpp" />
+    <ClInclude Include="src\classes\vector.hpp" />
+    <ClInclude Include="src\hacks\hack.hpp" />
+    <ClInclude Include="src\hacks\reader.hpp" />
+    <ClInclude Include="src\memory\handle_hijack.hpp" />
+    <ClInclude Include="src\memory\memory.hpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{5cf1bcb8-f845-4b57-bade-4d1876e1d2c4}</ProjectGuid>
-    <RootNamespace>CSGOHacks</RootNamespace>
+    <RootNamespace>CS2Hacks</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -117,6 +135,8 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile />
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,20 +159,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="src\bhop.cpp" />
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Memory.cpp" />
-    <ClCompile Include="src\triggerbot.cpp" />
-    <ClCompile Include="src\wallhack.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="include\bhop.hpp" />
-    <ClInclude Include="include\csgo.hpp" />
-    <ClInclude Include="include\Memory.hpp" />
-    <ClInclude Include="include\triggerbot.hpp" />
-    <ClInclude Include="include\wallhack.hpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
