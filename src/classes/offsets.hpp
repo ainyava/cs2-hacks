@@ -2,9 +2,9 @@
 #include <iostream>
 
 namespace offsets {
-	inline std::ptrdiff_t dwLocalPlayerController = 0x1911578;
-	inline std::ptrdiff_t dwEntityList = 0x18C1DB8;
-	inline std::ptrdiff_t dwViewMatrix = 0x19231B0;
+	inline std::ptrdiff_t dwLocalPlayerController = 0x19115A8;
+	inline std::ptrdiff_t dwEntityList = 0x18C1DE8;
+	inline std::ptrdiff_t dwViewMatrix = 0x19231E0;
 	inline std::ptrdiff_t dwBuildNumber = 0x515564;
 	inline std::ptrdiff_t dwPlantedC4 = 0x1927A68;
 
